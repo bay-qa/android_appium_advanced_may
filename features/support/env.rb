@@ -1,5 +1,8 @@
-require "appium_lib"
+# https://github.com/rspec/rspec-expectations
 
+require "appium_lib"
+require "rspec/expectations"
+require "pry"
 
 def caps
   {caps: { deviceName: "Samsung",

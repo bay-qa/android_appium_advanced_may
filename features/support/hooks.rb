@@ -2,7 +2,6 @@ Before do
   $driver.start_driver
 end
 
-
 After do |scenario|
   if scenario.failed?
     unless File.directory?("screenshots")

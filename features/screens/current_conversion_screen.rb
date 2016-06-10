@@ -20,4 +20,12 @@ class CurrentConversionScreen
    find_elements(id: "select_unit_spinner")[1]
  end
 
+ def type_on_keyboard(key)
+   find_element(id: "keypad").find_element(name: key).click
+ end
+
+ def source_field
+   find_element(id: "source_value")
+ end
+
 end

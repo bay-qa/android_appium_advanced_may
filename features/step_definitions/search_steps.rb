@@ -15,13 +15,15 @@ Then(/^I press Search icon on soft keyboard$/) do
 end
 
 Then(/^I verify "(.*?)" as current conversion$/) do |conversion_name|
-  current_conversion_screen.current_screen_title.text == conversion_name
+  # expect("Hello World!").to eq("Hello World!")
+  actual_conversion_name = current_conversion_screen.current_screen_title.text
+  expect(actual_conversion_name).to eq(conversion_name)
 end
 
 Then(/^I verify Left unit picker value is "(.*?)"$/) do |name|
-  current_conversion_screen.left_unit_picker.text == name
+  expect(current_conversion_screen.left_unit_picker.text).to eq(name)
 end
 
 Then(/^I verify Right unit picker value is "(.*?)"$/) do |name|
-  current_conversion_screen.right_unit_picker.text == name
+  expect(current_conversion_screen.right_unit_picker.text).to eq(name)
 end
