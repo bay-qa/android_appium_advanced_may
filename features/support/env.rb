@@ -20,5 +20,9 @@ Appium::Driver.new(caps)
 Appium.promote_appium_methods(Object)
 
 def current_conversion_screen
-  current_conversion_screen = CurrentConversionScreen.new
+  @current_conversion_screen ||= CurrentConversionScreen.new
+end
+
+def menu_screen
+  @menu_screen ||= MenuScreen.new
 end

@@ -3,6 +3,9 @@ Before do
 end
 
 After do |scenario|
+  #scenario.name
+  system("adb logcat -d >> logcat_logs.txt")
+
   if scenario.failed?
     unless File.directory?("screenshots")
       FileUtils.mkdir_p("screenshots")

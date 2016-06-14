@@ -21,11 +21,18 @@ class CurrentConversionScreen
  end
 
  def type_on_keyboard(key)
-   find_element(id: "keypad").find_element(name: key).click
+   keys_array = key.split(//)
+   keys_array.each do |k|
+     find_element(id: "keypad").find_element(name: k).click
+   end
  end
 
  def source_field
    find_element(id: "source_value")
+ end
+
+ def menu_icon
+   find_element(name: "Open navigation drawer")
  end
 
 end
