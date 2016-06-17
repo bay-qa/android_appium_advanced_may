@@ -26,3 +26,7 @@ end
 def menu_screen
   @menu_screen ||= MenuScreen.new
 end
+
+def custom_conversions_screen
+  @custom_conversions_screen ||= CustomConversionsScreen.new
+end
