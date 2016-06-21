@@ -1,8 +1,11 @@
 # https://github.com/rspec/rspec-expectations
 
+require "bundler"
 require "appium_lib"
 require "rspec/expectations"
 require "pry"
+
+
 
 def caps
   {caps: { deviceName: "Samsung",

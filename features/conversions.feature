@@ -16,7 +16,7 @@ Feature: Tests for converting values
     Then I verify Left unit picker value is "Day"
     And I verify Right unit picker value is "Second"
 
-  @wip
+
   Scenario: User able to create custom conversion
     Given I land on Default conversion screen
     Then I press on menu icon
@@ -36,8 +36,15 @@ Feature: Tests for converting values
     When I press on OK button on new unit creation screen
     Then I verify "Power" conversion on My conversions screen
 
-
-
+  @wip
+  Scenario: User able to convert Time values
+    Given I land on Default conversion screen
+    Then I press on menu icon
+    And I select "Time" from menu
+    Then I select "Decade" from left unit picker
+    And I select "Day" from right unit picker
+    When I type "1" on app keyboard
+    And I verify that target value is "3 652.425"
 
 
 

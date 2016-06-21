@@ -17,5 +17,15 @@ Then(/^I press on menu icon$/) do
 end
 
 And(/^I select "([^"]*)" from menu$/) do |unit_name|
-  menu_screen.select_from_menu(unit_name)
+  menu_screen.select_from_list(unit_name)
+end
+
+Then(/^I select "(.*?)" from left unit picker$/) do |value|
+  current_conversion_screen.left_unit_picker.click
+  current_conversion_screen.select_from_list(value)
+end
+
+Then(/^I select "(.*?)" from right unit picker$/) do |value|
+  current_conversion_screen.right_unit_picker.click
+  current_conversion_screen.select_from_list(value)
 end

@@ -1,7 +1,14 @@
-class CurrentConversionScreen
+class CurrentConversionScreen < ScreenActions
 
- def search_button
-   find_element(id: "action_search")
+ def verify_screen
+   find_with_wait{source_field}
+   find_with_wait{search_button}
+   find_with_wait{current_screen_title}
+   find_with_wait{left_unit_picker}
+ end
+
+  def search_button
+   find_with_wait(30){find_element(id: "action_search")}
  end
 
  def search_field
@@ -34,5 +41,6 @@ class CurrentConversionScreen
  def menu_icon
    find_element(name: "Open navigation drawer")
  end
+
 
 end

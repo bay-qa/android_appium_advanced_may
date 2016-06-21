@@ -1,5 +1,5 @@
 Given(/^I land on Default conversion screen$/) do
-  current_conversion_screen.search_button
+  current_conversion_screen.verify_screen
 end
 
 Then(/^I press on Search Icon in header$/) do

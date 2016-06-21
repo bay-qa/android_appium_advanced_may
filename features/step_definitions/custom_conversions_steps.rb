@@ -36,6 +36,5 @@ end
 
 Then(/^I verify "(.*?)" conversion on My conversions screen$/) do |name|
   result = custom_conversions_screen.verify_conversion_in_list?(name)
-  binding.pry
   expect(result).to be true
 end

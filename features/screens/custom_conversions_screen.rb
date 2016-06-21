@@ -1,4 +1,4 @@
-class CustomConversionsScreen
+class CustomConversionsScreen < ScreenActions
 
   def create_first_conversion
     find_element(id: "btn_new_custom_conversion")
