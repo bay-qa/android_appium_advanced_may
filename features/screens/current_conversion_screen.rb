@@ -1,7 +1,6 @@
 class CurrentConversionScreen < ScreenActions
 
  def verify_screen
-   find_with_wait{source_field}
    find_with_wait{search_button}
    find_with_wait{current_screen_title}
    find_with_wait{left_unit_picker}
