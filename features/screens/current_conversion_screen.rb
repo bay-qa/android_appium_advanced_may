@@ -1,7 +1,7 @@
 class CurrentConversionScreen < ScreenActions
 
  def verify_screen
-   find_with_wait{search_button}
+   find_with_wait{serch_button}
    find_with_wait{current_screen_title}
    find_with_wait{left_unit_picker}
  end
@@ -23,7 +23,7 @@ class CurrentConversionScreen < ScreenActions
  end
 
  def right_unit_picker
-   find_elements(id: "select_unit_spinner")[1]
+   find_elements(id: "select_unit_spinner")
  end
 
  def type_on_keyboard(key)
@@ -37,9 +37,8 @@ class CurrentConversionScreen < ScreenActions
    find_element(id: "source_value")
  end
 
+end
+
  def menu_icon
    find_element(name: "Open navigation drawer")
  end
-
-
-end
