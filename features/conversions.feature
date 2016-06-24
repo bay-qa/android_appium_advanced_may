@@ -1,6 +1,6 @@
 @conversions
 Feature: Tests for converting values
-
+  @wip
   Scenario: User able to convert Length
     Given I land on Default conversion screen
     And I verify Left unit picker value is "Foot"
@@ -36,7 +36,7 @@ Feature: Tests for converting values
     When I press on OK button on new unit creation screen
     Then I verify "Power" conversion on My conversions screen
 
-  @wip
+
   Scenario: User able to convert Time values
     Given I land on Default conversion screen
     Then I press on menu icon
